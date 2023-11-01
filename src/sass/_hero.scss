@@ -23,7 +23,6 @@
   // .hero__title
 
   &__title {
-    cursor: pointer;
     margin: 0 auto;
     margin-bottom: 24px;
     text-align: center;
@@ -38,8 +37,9 @@
   // .hero__benefits
 
   &__benefits {
+    position: relative;
     display: flex;
-    // justify-content: center;
+    justify-content: center;
     margin-bottom: 24px;
   }
 
@@ -55,8 +55,57 @@
   }
   &__benefits__item::before {
     content: '';
+    position: absolute;
     width: 16px;
     height: 16px;
     background-image: url(../images/logo/check-mob.svg);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px;
   }
+}
+
+.hero-adv {
+  margin-top: 40px;
+  margin-left: 48px;
+  margin-right: 48px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 55px;
+  column-gap: 40px;
+
+  &__item {
+    flex: 1;
+    // width: 85px;
+    // flex-basis: calc((100% - 55px) / 1);
+  }
+}
+
+.hero-adv__wrapper {
+  // width: 85px;
+
+  // ;
+}
+
+.hero-adv__text {
+  text-align: center;
+  color: getColor('whiteColor');
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.42;
+}
+.ddd {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  background-color: #2e3f7d;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+.hero-adv__icon {
 }
