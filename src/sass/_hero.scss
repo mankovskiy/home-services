@@ -19,8 +19,34 @@
     font-weight: 600;
     line-height: 1.43;
   }
-  &__features__item:not(:last-child) {
-    margin-right: 34px;
+  // &__features__item::after {
+  //   content: '';
+  //   display: inline-block;
+  //   border-radius: 50%;
+  //   width: 4px;
+  //   height: 4px;
+  //   background-color: #9399b2;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   margin-left: 8px;
+  // }
+  &__features__item {
+    column-gap: 30px;
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        display: inline-block;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        background-color: #9399b2;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
   }
   // .hero__title
 
@@ -73,6 +99,7 @@
 }
 
 .hero-adv {
+  position: relative;
   margin-top: 40px;
   margin-left: 48px;
   margin-right: 48px;
@@ -81,23 +108,56 @@
   flex-wrap: wrap;
   row-gap: 55px;
   column-gap: 40px;
-  // &::before {
+  // &::before,
+  // &::after {
   //   content: '';
-  //   display: block;
-  //   width: 20px;
-  //   background-image: url(../images/logo/hero-adv-icons/decoration-left.png);
+  //   position: absolute;
+  //   background: linear-gradient(
+  //     0deg,
+  //     rgba(20, 34, 87, 0) 0%,
+  //     rgba(79, 102, 183, 1) 50%,
+  //     rgba(20, 34, 87, 0) 100%
+  //   );
   // }
+  &::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+      0deg,
+      rgba(20, 34, 87, 0) 0%,
+      rgba(79, 102, 183, 1) 50%,
+      rgba(20, 34, 87, 0) 100%
+    );
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-1px);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+      0deg,
+      rgba(20, 34, 87, 0) 0%,
+      rgba(79, 102, 183, 1) 50%,
+      rgba(20, 34, 87, 0) 100%
+    );
 
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-1px);
+  }
   &__item {
-    flex: 1;
-    // width: 85px;
-    // flex-basis: calc((100% - 55px) / 1);
+    flex: 0;
   }
 }
 
-.hero-adv__wrapper {
-  // min-width: 85px;
-}
+// .hero-adv__wrapper {
+// min-width: 85px;
+// }
 
 .hero-adv__text {
   text-align: center;
