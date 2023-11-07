@@ -4,8 +4,8 @@ $colors: (
   'secondColor': #15b2f5,
   'greyColor': #9ea3b5,
   'whiteColor': #ffffff,
-  'secondary': #5a1321,
-  'foreground': #191919,
+  'primaryDarkBlue': #1f3584,
+  'blackColor': #171921,
 );
 @function getColor($key) {
   @return map-get($colors, $key);
