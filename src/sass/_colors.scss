@@ -4,7 +4,7 @@ $colors: (
   'secondColor': #15b2f5,
   'greyColor': #9ea3b5,
   'whiteColor': #ffffff,
-  'primaryDarkBlue': #1f3584,
+  'primaryDarkBlue': hsl(227, 62%, 32%),
   'blackColor': #171921,
 );
 @function getColor($key) {

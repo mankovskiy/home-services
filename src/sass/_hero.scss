@@ -69,22 +69,21 @@
     justify-content: center;
     margin-bottom: 24px;
   }
-  // &__benefits__item {
-  // position: relative;
-  // }
 
   &__benefits__item:not(:last-child) {
     margin-right: 24px;
   }
 
-  &__benefits__item__text {
+  &__benefits__item {
+    display: flex;
+    align-items: center;
     color: getColor('secondColor');
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.43;
   }
-  &__benefits__item__text::before {
+  &__benefits__item::before {
     // position: absolute;
     content: '';
     display: inline-block;
@@ -108,17 +107,6 @@
   flex-wrap: wrap;
   row-gap: 55px;
   column-gap: 40px;
-  // &::before,
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   background: linear-gradient(
-  //     0deg,
-  //     rgba(20, 34, 87, 0) 0%,
-  //     rgba(79, 102, 183, 1) 50%,
-  //     rgba(20, 34, 87, 0) 100%
-  //   );
-  // }
   &::before {
     content: '';
     position: absolute;
