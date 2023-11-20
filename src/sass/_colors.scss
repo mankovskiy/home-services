@@ -6,6 +6,7 @@ $colors: (
   'whiteColor': #ffffff,
   'primaryDarkBlue': hsl(227, 62%, 32%),
   'blackColor': #171921,
+  'redColor': #ff5e5e,
 );
 @function getColor($key) {
   @return map-get($colors, $key);

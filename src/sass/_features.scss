@@ -2,18 +2,21 @@
   text-align: center;
   margin-bottom: 52px;
 }
-.block-header__title {
-  @extend .block-header;
-  color: getColor('whiteColor');
+.block-header {
+  &__title {
+    @extend .block-header;
+    color: getColor('whiteColor');
+  }
 }
 .features {
+  padding: 20px 0px;
   &__outer-wrap {
     background-color: getColor('bcgColor');
     padding: 32px;
     border-radius: 12px;
   }
   &__items {
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
   }
   &__item:not(:last-child) {
     margin-bottom: 32px;
@@ -32,9 +35,9 @@
     margin-bottom: 12px;
     text-align: center;
     color: getColor('whiteColor');
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.33;
   }
   // &__info__wrap {
