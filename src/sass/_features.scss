@@ -1,23 +1,24 @@
+@import './colors';
+
 .features__block-header {
-  text-align: center;
+  @extend .block-header;
   margin-bottom: 52px;
 }
-.block-header {
-  &__title {
-    @extend .block-header;
-    color: getColor('whiteColor');
-  }
-}
+
 .features {
   padding: 20px 0px;
+  &__title {
+    @extend .block-header__title;
+    color: getColor('whiteColor');
+  }
   &__outer-wrap {
     background-color: getColor('bcgColor');
     padding: 32px;
     border-radius: 12px;
   }
-  &__items {
-    // margin-bottom: 32px;
-  }
+  // &__items {
+  // margin-bottom: 32px;
+  // }
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }

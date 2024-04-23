@@ -1,0 +1,6 @@
+.reviews {
+  &__title {
+    @extend .block-header__title, .block-header;
+    margin: 32px 0px;
+  }
+}

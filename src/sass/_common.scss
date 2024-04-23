@@ -14,10 +14,20 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+@mixin title-color($color: getColor('blackColor')) {
+  color: $color;
+}
+@mixin header-position($display: flex, $flex-direct: column, $a-i: center) {
+  display: $display;
+  flex-direction: $flex-direct;
+  align-items: $a-i;
+}
+
 .block-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  // flex-direction: column;
+  text-align: center;
 
   &__title {
     color: getColor('blackColor');
@@ -35,4 +45,12 @@ body {
     line-height: 1.55;
     // max-width: 328px;
   }
+}
+
+.black-color {
+  @include title-color(getColor('blackColor'));
+}
+
+.white-color {
+  @include title-color(getColor('whiteColor'));
 }

@@ -1,8 +1,14 @@
-.advantages__block-header {
-  text-align: center;
-  margin-bottom: 32px;
-}
+@import './colors';
+// @import './common';
 
+.advantages__block-header {
+  @extend .block-header;
+  margin-bottom: 32px;
+  min-width: 313px;
+}
+// .header__title {
+//   @include header(getColor('whiteColor'));
+// }
 .advantages {
   padding-bottom: 32px;
   &__items {
@@ -52,6 +58,7 @@
     line-height: 1.55;
   }
   &__info-box__title {
+    text-align: center;
     color: getColor('whiteColor');
     margin-bottom: 4px;
   }

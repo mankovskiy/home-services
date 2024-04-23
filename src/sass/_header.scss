@@ -1,14 +1,20 @@
 @import './colors';
 
 .header {
+  // position: fixed;
   background-color: getColor('bcgColor');
 }
 
 .header-menu {
+  // position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;
+  // @media screen and (max-width: 1023px) {
+  //     display: none;
+  //   }
+
   &__worktime::before {
     content: '';
     display: inline-block;
@@ -16,7 +22,6 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-
     background-color: getColor('redColor');
   }
   &__worktime {
@@ -25,21 +30,23 @@
     font-style: normal;
     font-weight: 700;
     line-height: 1.33;
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
   }
 }
 
 .header__hamburger {
-  display: flex;
   display: none;
   height: 26px;
   width: 32px;
-  //   position: absolute;
-  //   top: 17px;
-  //   left: 20px;
-  //   z-index: 2;
-
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  .header__hamburger {
+    display: flex;
+  }
 }
 .line {
   display: block;
@@ -50,6 +57,10 @@
 }
 
 .main-nav {
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+
   &__list {
     display: flex;
   }
